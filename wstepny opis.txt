@@ -1,0 +1,48 @@
+PLATFORMA REZERWACJI LOTÓW
+
+metody:
+
+AddingAndSubscribe.cs -> dodawanie, odejmowanie w tetbokie zabezpieczeñ przed przekraczaniem niedozwolonych wartoœci
+Admin_wybor.xaml -> panel g³ówny widoku administratora
+DefinicjaSamolotow.xaml -> definiowanie po³o¿enia siedzeñ w samolocie, charakterystyki nowego samolotu
+DopasowanieLotySamoloty.xaml -> jakii samolot i sk¹d dokad leci
+DynamicGrid.cs -> dynamiczna siatka ulokowania siedzeñ
+FAQ.xaml --> :-)
+MainWindow.xaml -> oknologowania
+PojemnikSamolot.cs -> klasa samolotu, definicja pó danych w klasie samolot
+Pomoc.xaml -> pomoc :)
+Rejestracja.xaml -> rejestracja
+Samolot.xaml -> wyœwietlanie siatki samolotu
+Ticket.xaml -> okno zapisu biletu na dysku i nadanie mu nazwy
+ToImage.cs -> konwertowanie biletu do bitmapy
+Window1.xaml -> g³ówne okno wyboru lotu/ rezerwowania biletu przez u¿ytkownika
+
+
+Baza danych
+samoloty:
+tabele: users - id NOT NULL PRIMARY KEY AUTO)INCREMENT,
+                nick VARCHAR(20), 
+                password VARCHAR(20), 
+                email VARCHAR(20)
+        types - id NOT NULL PRIMARY KEY AUTO)INCREMENT, 
+                name, 
+                row
+                place_per_row
+                boffor_row
+ 		buffor_place
+        tickets - id NOT NULL PRIMARY KEY AUTO)INCREMENT,
+                  imie VCHAR(20), 
+		  nazwisko, 
+		  rzad, 
+		  miejsce, 
+		  skad, 
+  		  dokad 
+        flyfit - id, 
+		 namee, 
+		 skadd, 
+		 dakadd
+
+
+U¿ytkownicy:
+dwa typy: 1 - administrator - mo¿e dodawaæ samoloty i po³¹czenia
+          2 - "zwyk³y" u¿ytkownik - mo¿e rezerwowaæ loty na dany termin
